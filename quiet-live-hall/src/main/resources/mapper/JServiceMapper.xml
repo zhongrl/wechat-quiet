@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quiet.live.hall.mapper.JServiceMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, service_name AS serviceName, create_time AS createTime, update_time AS updateTime, oper AS oper,
+		  oper_id AS operId,service_time AS serviceTime 
+	</sql>
+
+</mapper>

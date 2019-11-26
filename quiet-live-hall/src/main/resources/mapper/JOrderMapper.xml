@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quiet.live.hall.mapper.JOrderMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, create_time AS createTime, order_number AS orderNumber, line_up_number AS lineUpNumber, price AS price, 
+		 coupon_price AS couponPrice, org_price AS orgPrice, service_id AS serviceId, service_name AS serviceName, 
+		 store_id AS storeId, store_name AS storeName, coupon_id AS couponId, coupon_name AS couponName, js_username AS jsUsername,
+		  js_user_id AS jsUserId, js_head_img AS jsHeadImg, js_mobile AS jsMobile, cust_mobile AS custMobile, 
+		  cust_openid AS custOpenid, cust_username AS custUsername, cust_head_img AS custHeadImg, status AS status,
+		   pay_number AS payNumber, pay_time AS payTime,service_time AS serviceTime,jy_price AS jyPrice,update_time AS updateTime 
+		   ,cancel_remark AS cancelRemark , jsServiceTime AS jsServiceTime
+		   ,jw_du AS jwDu
+		   ,address AS  address 
+		   ,level AS level 
+		   ,cust_user_Id AS custUserId 
+		   ,ordernum 
+		   ,optSource 
+	</sql>
+
+	<select id = "selectOrderTotal" parameterType="com.quiet.live.hall.entity.JOrder" resultType="com.quiet.live.hall.vo.BiOrderVo">
+		select SUM(price) as totalSalar,count(1) as totalOrderNum  FROM j_order where status = 1 
+		<if test="dto.storeId !=null and dto.storeId != ''">
+		     and store_id = #{dto.storeId} 
+		</if>
+		<if test="null != dto.startTime and null != dto.endTime">
+			<![CDATA[ and create_time > #{dto.startTime} and create_time <  #{dto.endTime} ]]>
+		</if>
+	</select>
+</mapper>

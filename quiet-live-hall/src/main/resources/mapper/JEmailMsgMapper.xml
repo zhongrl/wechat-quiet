@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quiet.live.hall.mapper.JEmailMsgMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, msg_type AS msgType, create_time AS createTime, send_time AS sendTime, send_status AS sendStatus, title AS title, value AS value, email AS email, type AS type, content AS content, user_id AS userId, user_name AS userName, error_msg AS errorMsg, to_email AS toEmail, open_id AS openId, file_path AS filePath
+	</sql>
+
+</mapper>

@@ -1,0 +1,28 @@
+{
+"menu":"{
+        \"button\": [
+           {
+		      \"type\": \"miniprogram\", 
+		      \"name\": \"预约取号\", 
+		      \"url\": \"https://www.jingxiang2019.com\", 
+		      \"appid\": \"wx7b9ec8c0aab7e670\", 
+		      \"pagepath\": \"/pages/login/login\"
+		    },
+            {
+                \"type\": \"view\",
+                \"name\": \"技师平台\",
+                \"url\": \"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx0a45b143e43cfb37&redirect_uri=https%3a%2f%2fwww.jingxiang2019.com%2ftechnician%2findex.html&response_type=code&scope=snsapi_userinfo&state=state#wechat_redirect\",
+                \"sub_button\": []
+            },
+            {
+                \"type\": \"view\",
+                \"name\": \"支付\",
+                \"url\": \"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx0a45b143e43cfb37&redirect_uri=http%3a%2f%2fwww.zhongrl.com%2fpay%2findex.html&response_type=code&scope=snsapi_userinfo&state=state#wechat_redirect\",
+                \"sub_button\": []
+            }
+        ]
+ }"	
+}
+
+
+https://www.xxx.com/wx/menu

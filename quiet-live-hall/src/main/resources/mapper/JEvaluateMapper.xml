@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.quiet.live.hall.mapper.JEvaluateMapper">
+
+	<!-- 通用查询结果列-->
+	<sql id="Base_Column_List">
+		 id, create_time AS createTime, user_id AS userId, user_name AS userName, 
+		 status AS status, wx_head_img AS wxHeadImg, wx_user_name AS wxUserName, 
+		 js_manyi AS jsManyi, service_yx AS serviceYx, gt_dw AS gtDw, remark AS remark, 
+		 img1 AS img1, img2 AS img2, img3 AS img3,openId ,avg_num AS avgNum,order_id AS orderId   
+	</sql>
+
+</mapper>

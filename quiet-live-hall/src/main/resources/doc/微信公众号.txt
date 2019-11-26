@@ -1,0 +1,51 @@
+邮箱：15112639969@139.com
+1050356909@qq.com
+密码：HYN198710
+120.24.238.107  
+http://jingxiang2019.com
+百度账号
+15112639969
+
+hyn183653
+开发者账号
+注册邮箱 jingxiang_2019@163.com
+原始IDgh_30d553f88603
+密码HYN198710
+
+腾讯地图key 
+ZPUBZ-DKIWP-W67DA-LZASP-5JUN3-GYFBQ
+
+TXT	_dnsauth
+SSL:
+201909280000005drwkg6jii9obmw8h7szk105b96d2pm4rxhpem5pn2mx45jmtd
+
+
+
+阿里云账号
+
+胡亚楠9969
+
+HYN198710
+
+
+120.24.238.107(公)   root/Root@hyn*
+172.18.139.156(私有)  mysql root/root@hyn
+
+ update user set authentication_string=password("root@hyn") where user="root";
+update user set host = '%' where user ='root'; 
+允许任意主机连接
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED Y 'root' WITH GRANT OPTION;
+ grant all privileges on *.* to 'root'@'%' identified by 'root@hyn' with grant option;
+
+grant all privileges on *.* to 'root'@'%' identified by 'root@hyn' with grant option;
+flush privileges;
+
+-A?INPUT?-m?state?--state?ESTABLISHED,RELATED?-j?ACCEPT
+-A?INPUT?-p?icmp?-j?ACCEPT
+-A?INPUT?-i?lo?-j?ACCEPT
+-A?INPUT?-m?state?--state?NEW?-m?tcp?-p?tcp?--dport?22?-j?ACCEPT
+-A?INPUT?-m?state?--state?NEW?-m?tcp?-p?tcp?--dport?3306?-j?ACCEPT
+-A?INPUT?-j?REJECT?--reject-with?icmp-host-prohibited
+-A?FORWARD?-j?REJECT?--reject-with?icmp-host-prohibited
+
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
